@@ -1,0 +1,332 @@
+// Normalize 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+// Colors 
+$white: #fafafa;
+$black: #222222;
+$grey: #6b6b6b;
+$light-green: #5C9735;
+$dark-green: #141A0F;
+
+// Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Unna&display=swap');
+
+// Navbar 
+.navbar{
+    background-color: #22222283;
+    position: fixed;
+    z-index: 10000;
+    width: 100vw;
+}
+
+.navbar-brand{
+    color: $white;
+    font-family: 'Unna', serif;
+    font-size: 25px;
+}
+
+.nav-link{
+    color: $white;
+    font-size: 14px;
+    position: relative;
+}
+
+.navbar-brand:hover, .nav-link:hover{
+    color: $white;
+}
+
+#status{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background-color: #5C9735;
+    height: 40%;
+    width: 40%;
+    font-size: 11px;
+    border-radius: 50%;
+}
+
+// Home 
+.home{
+    background-image: url(../img/home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-info{
+    text-align: center;
+    color: white;
+
+    h1{
+        font-family: 'Unna', serif;
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    a{
+        border: none;
+        padding: 12px 30px;
+        background-color: $white;
+        color: $black;
+        text-decoration: none;
+    }
+
+    a:hover{
+        background-color: $light-green;
+        color: $white;
+    }
+}
+
+// Plants 
+#plantsCards{
+    position: relative;
+}
+
+.added-modal{
+    font-size: 14px;
+    margin: 0;
+    position: fixed;
+    z-index: 9999;
+    bottom: 15px;
+    left: 15px;
+    background-color: $light-green;
+    color: $white;
+    padding: 12px 30px;
+    width: auto;
+}
+
+#filter{
+    text-align: center;
+    margin-bottom: 2rem;
+
+    a{
+        text-decoration: none;
+        margin: 0 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 14px;
+        color: $grey;
+    }
+
+    a:hover{
+        color: $white;
+        background-color: #acacac;
+    }
+}
+
+.plants{
+    padding: 100px 0;
+
+    h2{
+        font-family: 'Playfair Display', sans-serif;
+        color: $black;
+        margin-bottom: 4rem;
+    }
+}
+
+.card-plant{
+    position: relative;
+
+    h3{
+        margin-top: 1rem;
+        font-family: 'Unna', serif;
+        font-size: 24px;
+    }
+}
+
+.img-card-container{
+    overflow: hidden;
+}
+
+.img-card{
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.img-card:hover{
+    transform: scale(1.1);
+}
+
+.add{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0.4rem 0.6rem;
+
+    i{
+        color: $black;
+    }
+}
+
+.add:hover{
+    background-color: $light-green;
+    border: none;
+
+    i{
+        color: $white;
+    }
+}
+
+.short-desc{
+    color: $grey;
+    font-size: 14px;
+}
+
+// Cart 
+#modalCart{
+    display: none;
+    justify-content: right;
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2222229f;
+}
+
+.cart-modal{
+    position: relative;
+    overflow-y: scroll;
+    width: 35%;
+    height: 100vh;
+    padding: 1.5rem;
+    font-size: 14px;
+    background-color: $white;
+
+    h4{
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $grey;
+        color: $black;
+        margin-bottom: 2rem;
+    }
+}
+
+.exit{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.plant-div{
+    margin-bottom: 1rem;
+}
+
+.plant-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.plant-name{
+    font-weight: 600;
+}
+
+.remove{
+    a{
+        font-size: 16px;
+        color: $black;
+    }
+
+    a:hover{
+        color: red;
+    }
+}
+
+// About 
+.about{
+    padding: 100px 0;
+}
+
+.about-info{
+    padding: 4rem;
+
+    :nth-child(1){
+        font-family: 'Unna', serif;
+        letter-spacing: 8px;
+    }
+
+    h2{
+        font-family: 'Unna', serif;
+    }
+
+    a{
+        border: none;
+        padding: 12px 30px;
+        background-color: $light-green;
+        color: $white;
+        text-decoration: none;
+    }
+
+    a:hover{
+        background-color: $dark-green;
+    }
+}
+
+// Footer 
+.footer{
+    padding-top: 100px;
+    background-color: $dark-green;
+    text-align: center;
+
+    h2{
+        font-family: 'Unna', serif;
+        color: $white;
+    }
+
+    input{
+        border: none;
+        padding: 12px 30px;
+    }
+
+    button{
+        border: none;
+        padding: 12px 30px;
+        background-color: $light-green;
+        color: $white;
+        text-decoration: none;
+    }
+
+    button:hover{
+        background-color: $grey;
+    }
+}
+
+.social-footer{
+    color: $grey;
+    margin-top: 3rem;
+    
+    i{
+        padding: 1rem;
+        font-size: 20px;
+    }
+}
+
+.copy{
+    color: $grey;
+    padding: 30px 0;
+    border-top: 1px solid $grey;
+    margin: 0;
+    margin-top: 4rem;
+    font-size: 14px;
+}

@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Unna&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  background-color: rgba(34, 34, 34, 0.5137254902);
+  position: fixed;
+  z-index: 10000;
+  width: 100vw;
+}
+
+.navbar-brand {
+  color: #fafafa;
+  font-family: "Unna", serif;
+  font-size: 25px;
+}
+
+.nav-link {
+  color: #fafafa;
+  font-size: 14px;
+  position: relative;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #fafafa;
+}
+
+#status {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: #5C9735;
+  height: 40%;
+  width: 40%;
+  font-size: 11px;
+  border-radius: 50%;
+}
+
+.home {
+  background-image: url(../img/home.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-info {
+  text-align: center;
+  color: white;
+}
+.home-info h1 {
+  font-family: "Unna", serif;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+.home-info a {
+  border: none;
+  padding: 12px 30px;
+  background-color: #fafafa;
+  color: #222222;
+  text-decoration: none;
+}
+.home-info a:hover {
+  background-color: #5C9735;
+  color: #fafafa;
+}
+
+#plantsCards {
+  position: relative;
+}
+
+.added-modal {
+  font-size: 14px;
+  margin: 0;
+  position: fixed;
+  z-index: 9999;
+  bottom: 15px;
+  left: 15px;
+  background-color: #5C9735;
+  color: #fafafa;
+  padding: 12px 30px;
+  width: auto;
+}
+
+#filter {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#filter a {
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.6rem 1rem;
+  font-size: 14px;
+  color: #6b6b6b;
+}
+#filter a:hover {
+  color: #fafafa;
+  background-color: #acacac;
+}
+
+.plants {
+  padding: 100px 0;
+}
+.plants h2 {
+  font-family: "Playfair Display", sans-serif;
+  color: #222222;
+  margin-bottom: 4rem;
+}
+
+.card-plant {
+  position: relative;
+}
+.card-plant h3 {
+  margin-top: 1rem;
+  font-family: "Unna", serif;
+  font-size: 24px;
+}
+
+.img-card-container {
+  overflow: hidden;
+}
+
+.img-card {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.img-card:hover {
+  transform: scale(1.1);
+}
+
+.add {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0.4rem 0.6rem;
+}
+.add i {
+  color: #222222;
+}
+
+.add:hover {
+  background-color: #5C9735;
+  border: none;
+}
+.add:hover i {
+  color: #fafafa;
+}
+
+.short-desc {
+  color: #6b6b6b;
+  font-size: 14px;
+}
+
+#modalCart {
+  display: none;
+  justify-content: right;
+  position: fixed;
+  z-index: 10001;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.6235294118);
+}
+
+.cart-modal {
+  position: relative;
+  overflow-y: scroll;
+  width: 35%;
+  height: 100vh;
+  padding: 1.5rem;
+  font-size: 14px;
+  background-color: #fafafa;
+}
+.cart-modal h4 {
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #6b6b6b;
+  color: #222222;
+  margin-bottom: 2rem;
+}
+
+.exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.plant-div {
+  margin-bottom: 1rem;
+}
+
+.plant-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.plant-name {
+  font-weight: 600;
+}
+
+.remove a {
+  font-size: 16px;
+  color: #222222;
+}
+.remove a:hover {
+  color: red;
+}
+
+.about {
+  padding: 100px 0;
+}
+
+.about-info {
+  padding: 4rem;
+}
+.about-info :nth-child(1) {
+  font-family: "Unna", serif;
+  letter-spacing: 8px;
+}
+.about-info h2 {
+  font-family: "Unna", serif;
+}
+.about-info a {
+  border: none;
+  padding: 12px 30px;
+  background-color: #5C9735;
+  color: #fafafa;
+  text-decoration: none;
+}
+.about-info a:hover {
+  background-color: #141A0F;
+}
+
+.footer {
+  padding-top: 100px;
+  background-color: #141A0F;
+  text-align: center;
+}
+.footer h2 {
+  font-family: "Unna", serif;
+  color: #fafafa;
+}
+.footer input {
+  border: none;
+  padding: 12px 30px;
+}
+.footer button {
+  border: none;
+  padding: 12px 30px;
+  background-color: #5C9735;
+  color: #fafafa;
+  text-decoration: none;
+}
+.footer button:hover {
+  background-color: #6b6b6b;
+}
+
+.social-footer {
+  color: #6b6b6b;
+  margin-top: 3rem;
+}
+.social-footer i {
+  padding: 1rem;
+  font-size: 20px;
+}
+
+.copy {
+  color: #6b6b6b;
+  padding: 30px 0;
+  border-top: 1px solid #6b6b6b;
+  margin: 0;
+  margin-top: 4rem;
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */
